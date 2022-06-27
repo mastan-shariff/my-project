@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lato&family=Poppins:wght@500&family=Roboto+Slab&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* @import url(https://fonts.googleapis.com/css?family=Dancing+Script);   */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* background:url('https://source.unsplash.com/collection/151521/undisturbed-pattern-wallpapers'); */
+}
+
+body {
+  /* background:url('https://source.unsplash.com/collection/1410320/raindrops-%2B-glass');  */
+  background: #84f986;
+}
+
+.profile {
+  width: 1080px;
+  left: 50%;
+  float: left;
+  position: relative;
+  margin: 50px 0px 50px 0px;
+  margin-left: -540px;
+  cursor: pointer;
+  /* background-image: linear-gradient(to right, red , yellow); */
+}
+
+.profile .imageHolder {
+  float: left;
+  width: 30%;
+  position: relative;
+  left: 5%;
+}
+
+.profile .imageHolder .profilePic {
+  width: 100%;
+  float: left;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -webkit-box-shadow: 0px 0px 31px -1px #474747;
+  box-shadow: 0px 0px 31px -1px #474747;
+}
+
+.profile .imageHolder:after {
+  content: '';
+  pointer-events: none;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+  min-height: 30vh;
+  display: block;
+  top: 4vw;
+  opacity: 0;
+  float: left;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -webkit-animation: bounce .5s linear infinite;
+          animation: bounce .5s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.profile h1 {
+  font-family: 'Fjalla One', sans-serif;
+  color: #D10606;
+  position: absolute;
+  width: 100%;
+  padding: 0px 0px 0px 32%;
+  margin-top: -50px;
+  margin-bottom: 0px;
+  font-size: 15vw;
+  letter-spacing: 1vw;
+  z-index: 10000;
+  font-weight: 400;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+}
+
+.profile h1:after {
+  content: '';
+  float: left;
+  position: absolute;
+  left: 50%;
+  bottom: -10vw;
+  width: 5px;
+  height: 10vw;
+  background-color: #D10606;
+}
+
+.profile h2 {
+  display: inline;
+  color: #0f110f;
+}
+
+.profile:hover h1 {
+  -webkit-transform: translateY(30vw);
+          transform: translateY(30vw);
+}
+
+.profile:hover .profilePic {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.profile:hover .imageHolder:after {
+  opacity: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.profile .infoHolder {
+  width: 60%;
+  float: right;
+  right: 1%;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.profile .infoHolder h2 {
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+  letter-spacing: 3px;
+  margin-top: 0px;
+  float: left;
+  width: 100%;
+  -webkit-transform: translateX(102%);
+          transform: translateX(102%);
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+}
+
+.profile .infoHolder p {
+  font-family: 'Roboto Slab',  serif;
+  color: #fe01d8;
+  float: left;
+  font-weight: 300;
+  margin-top: 0px;
+  width: 100%;
+  -webkit-transform: translateX(102%);
+          transform: translateX(102%);
+  transition: all .62s ease;
+  -webkit-transition: all .62s ease;
+}
+
+.profile:hover .infoHolder h2, .profile:hover .infoHolder p {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@media screen and (min-width: 1080px) {
+  h1 {
+    font-size: 120pt !important;
+    letter-spacing: 20pt !important;
+  }
+  h1:after {
+    bottom: -120px !important;
+    height: 120px !important;
+  }
+  .profile:hover h1 {
+    -webkit-transform: translateY(250px);
+            transform: translateY(250px);
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .profile {
+    width: 100%;
+    left: 0%;
+    margin-left: 0px;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=pstyle.css.map */
